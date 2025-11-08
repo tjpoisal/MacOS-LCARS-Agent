@@ -1,0 +1,66 @@
+{
+  "name": "macos-lcars-agent",
+  "version": "1.0.0",
+  "description": "Star Trek LCARS-inspired intelligent assistant for macOS",
+  "main": "dist/main.js",
+  "homepage": "./",
+  "author": "LCARS Development",
+  "license": "MIT",
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "dev": "concurrently \"npm run react-start\" \"wait-on http://localhost:3000 && npm run electron-start\"",
+    "build": "npm run react-build && electron-builder",
+    "dist": "npm run react-build && electron-builder --mac --publish never",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4",
+    "axios": "^1.4.0",
+    "socket.io-client": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/electron": "^1.6.10",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "typescript": "^4.9.0",
+    "concurrently": "^7.0.0",
+    "wait-on": "^7.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "com.lcars.agent",
+    "productName": "LCARS Agent",
+    "mac": {
+      "category": "public.app-category.productivity"
+    }
+  }
+}

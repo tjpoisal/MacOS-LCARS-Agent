@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lcars-blue: #0033ff;
+  --lcars-orange: #ff6600;
+  --lcars-yellow: #ffcc00;
+  --lcars-red: #ff0000;
+  --lcars-green: #00ff00;
+  --lcars-black: #000000;
+  --lcars-white: #ffffff;
+  --lcars-light-blue: #0066ff;
+  --lcars-dark-blue: #001a99;
+  --lcars-salmon: #ff6666;
+  --lcars-tan: #ccaa66;
+  --lcars-gray: #333333;
+}
+
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: var(--lcars-black);
+  color: var(--lcars-white);
+  overflow: hidden;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--lcars-black);
+  color: var(--lcars-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 20px;
+}
+
+.error-display {
+  background-color: var(--lcars-red);
+  color: var(--lcars-white);
+  padding: 15px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  max-width: 600px;
+  border: 2px solid var(--lcars-red);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* LCARS UI Elements */
+.lcars-button {
+  background: linear-gradient(135deg, var(--lcars-orange), var(--lcars-yellow));
+  color: var(--lcars-black);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+}
+
+.lcars-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.8);
+}
+
+.lcars-button:active {
+  transform: scale(0.95);
+}
+
+.lcars-panel {
+  background: linear-gradient(135deg, var(--lcars-dark-blue), var(--lcars-blue));
+  border: 2px solid var(--lcars-orange);
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: inset 0 0 20px rgba(0, 51, 255, 0.3),
+    0 0 20px rgba(255, 102, 0, 0.5);
+}
+
+.lcars-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: pulse 1s infinite;
+}
+
+.lcars-indicator.online {
+  background-color: var(--lcars-green);
+  box-shadow: 0 0 10px var(--lcars-green);
+}
+
+.lcars-indicator.offline {
+  background-color: var(--lcars-red);
+  box-shadow: 0 0 10px var(--lcars-red);
+  animation: none;
+}
+
+.lcars-indicator.processing {
+  background-color: var(--lcars-yellow);
+  box-shadow: 0 0 10px var(--lcars-yellow);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 51, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 51, 255, 0.8);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  .lcars-panel {
+    padding: 15px;
+  }
+}
