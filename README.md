@@ -1,13 +1,15 @@
 # macOS LCARS Agent
 
-A sophisticated, agentic intelligent assistant for macOS that replaces Siri with the iconic **LCARS** (Library Computer Access and Retrieval System) interface and voice from the Enterprise-D computer.
+A sophisticated, agentic intelligent assistant for macOS that replaces Siri with the iconic **LCARS** (Library Computer Access and Retrieval System) interface and voice from Star Trek: Picard Season 3.
+
+Featuring the modern, refined LCARS aesthetic from the latest Star Trek series with contemporary styling, subtle cyan accents, and elegant gold highlights.
 
 ## 🖥️ Features
 
-- **Authentic LCARS Interface**: Enterprise-D computer design with orange borders, blue panels, and glowing indicators
+- **Picard Season 3 LCARS Interface**: Modern, refined LCARS design with sophisticated color palette (cyan accents, gold highlights, dark blue panels)
 - **Agentic AI**: Claude-powered autonomous task execution and decision-making
 - **Voice Control**: Natural language voice input with real-time transcription
-- **Enterprise-D Voice**: Responses in the iconic LCARS computer voice (pyttsx3 synthesis)
+- **LCARS Voice**: Responses in the iconic LCARS computer voice (pyttsx3 synthesis)
 - **Hotkey Activation**: Press `Cmd+Space` to activate voice input anywhere
 - **Task Execution**: Run scripts, open applications, control system settings
 - **Real-time Communication**: WebSocket-based frontend-backend communication
@@ -164,28 +166,33 @@ The agent can:
 - Remember conversation context
 - Execute complex task workflows
 
-## 🎨 LCARS Design
+## 🎨 Picard Season 3 LCARS Design
 
-The interface features authentic LCARS design elements:
+The interface features the modern LCARS aesthetic from Star Trek: Picard Season 3:
 
-- **Color Scheme**:
-  - Blue panels (`#0033ff`, `#001a99`)
-  - Orange borders and accents (`#ff6600`)
-  - Yellow highlights (`#ffcc00`)
-  - Green indicators (`#00ff00`)
+- **Color Scheme** (Contemporary & Sophisticated):
+  - Primary Blue: `#1a4d7a` - Deep, professional blue panels
+  - Secondary Blue: `#2a6fa6` - Lighter blue accents
+  - Cyan Accents: `#00d9ff` - Modern cyan borders and highlights
+  - Gold Accents: `#d4af37` - Elegant gold buttons and labels
+  - Amber: `#ff8c00` - Warm highlights
+  - Background: `#0a0e1a` - Deep space black
+  - Surface: `#131824` - Subtle surface color
 
 - **UI Elements**:
-  - Glowing indicators
-  - Animated buttons
-  - Status bars
-  - Decorative corners
-  - Typewriter text effect
+  - Subtle glowing indicators with reduced intensity
+  - Refined gradient buttons
+  - Backdrop blur effects for depth
+  - Minimalist decorative corners
+  - Monospace Courier New typography
+  - Typewriter text effect with cyan cursor
 
 - **Animations**:
-  - Pulse rings for listening state
-  - Processing spinner
-  - Text cursor blink
-  - Smooth transitions
+  - Smooth pulse rings (cyan for listening)
+  - Processing spinner with gold accents
+  - Elegant text cursor blink
+  - Refined transitions (0.2s ease)
+  - Subtle glow effects instead of harsh shadows
 
 ## 🔐 Security
 
